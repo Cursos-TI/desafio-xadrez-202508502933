@@ -34,5 +34,27 @@ int main(void) {
         k++;
     } while (k < passos_rainha);
 
+      /* -------- CAVALO (loops aninhados) -------- */
+    printf("\nMovimento do Cavalo (loops aninhados):\n");
+
+    const int movimentos_cavalo = 1; /* quantos "L" quer simular */
+    const int passos_baixo = 2;       /* 2 casas para baixo */
+    const int passos_esquerda = 1;    /* 1 casa para esquerda */
+
+    /* for externo = cada "L" do cavalo */
+    for (int mov = 0; mov < movimentos_cavalo; mov++) {
+        /* for interno = 2 passos para baixo */
+        for (int i = 0; i < passos_baixo; i++) {
+            printf("Baixo\n");
+        }
+
+        /* while interno = 1 passo para esquerda */
+        int j2 = 0;
+        while (j2 < passos_esquerda) {
+            printf("Esquerda\n");
+            j2++;
+        }
+    }
+  
     return 0;
 }
